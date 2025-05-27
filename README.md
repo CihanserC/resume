@@ -29,22 +29,8 @@ This resume website is crafted using the following core web technologies:
 
 You can view the live version of my resume here:
 
-* **[Link to your live website (e.g., your GitHub Pages URL, Netlify URL, or custom domain)]**
+* **[(https://cihanserc.github.io/resume/)]**
 
-Alternatively, if you'd like to explore the code or run it locally:
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [Your Repository URL Here]
-    ```
-    (e.g., `git clone https://github.com/your-username/your-resume-repo.git`)
-2.  **Navigate to the project directory:**
-    ```bash
-    cd [your-resume-repo-name]
-    ```
-3.  **Open `index.html`:** Simply open the `index.html` file in your preferred web browser to view the resume.
-
----
 
 ## Project Structure
 
@@ -63,4 +49,4 @@ Feel free to reach out to me for any inquiries or collaborations!
 
 * **Email:** [cihansercaliskan@gmail.com]
 * **LinkedIn:** [www.linkedin.com/in/cihanser-caliskan/]
-* **GitHub:** [[github.com/CihanserC](https://github.com/CihanserC)]
+* **GitHub:** [(https://github.com/CihanserC)]
