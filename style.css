@@ -1,0 +1,106 @@
+/* Genel Ayarlar */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Header ve Navigasyon */
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 20px;
+    min-height: 70px;
+    border-bottom: #77aaff 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header .highlight, header .current a {
+    color: #77aaff;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #77aaff;
+    font-weight: bold;
+}
+
+/* Bölüm Stilleri */
+section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+    background: #fff;
+    border-bottom: #ccc 1px solid;
+    text-align: center;
+}
+
+section h1, section h2 {
+    color: #333;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #333;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    header nav, header #branding {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header li {
+        display: block;
+        padding: 10px 0;
+        border-bottom: #555 1px solid;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+}
