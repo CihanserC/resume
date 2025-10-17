@@ -1,52 +1,64 @@
-# My Online Resume
+# Resume Website
 
-## About This Project
+A modern, interactive personal resume website built with React and Vite.
 
-Welcome to the repository for my personal online resume! This project serves as a dynamic and interactive way to showcase my skills, experience, and projects. It's built entirely with **frontend web technologies**, demonstrating my abilities in web development while providing an accessible overview of my professional background.
+## 🚀 Features
 
----
+- **Interactive Background**: LinkedIn-inspired blue gradient with mouse-responsive particle system
+- **Responsive Design**: Mobile-friendly layout that adapts to all screen sizes
+- **Modern UI**: Clean and professional design with smooth animations
+- **Fast Performance**: Built with Vite for lightning-fast load times
 
-## Technologies Used
+## 🛠️ Technologies
 
-This resume website is crafted using the following core web technologies:
+- React 18
+- Vite
+- CSS3 with animations
+- Canvas API for particle effects
+- Font Awesome icons
 
-* **HTML5:** For structuring the content and semantics of the page.
-* **CSS3:** For styling the website, including **responsive design** for various screen sizes (desktops, tablets, and mobile phones).
-* **JavaScript (ES6+):** For adding interactive elements and enhancing the user experience (e.g., smooth scrolling, dynamic content).
+## 📦 Installation
 
----
+```bash
+# Install dependencies
+npm install
 
-## Features
+# Run development server
+npm run dev
 
-* **Clean and Responsive Design:** Adapts seamlessly to different screen sizes, ensuring a great user experience on any device.
-* **Clear Navigation:** Easy-to-use navigation allows visitors to quickly find specific sections like "Experience," "Education," or "Projects."
-* **Detailed Sections:** Comprehensive sections covering my personal summary, professional experience, educational background, key skills, and personal projects.
-* **Direct Contact:** Easy access to my contact information and professional social links.
+# Build for production
+npm run build
+```
 
----
+## 🌐 Development
 
-## How to View
+The site runs on `http://localhost:3000` by default.
 
-You can view the live version of my resume here:
+## 📁 Project Structure
 
-* **[(https://cihanserc.github.io/resume/)]**
+```
+ResumeWebSite/
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Hero.jsx
+│   │   ├── About.jsx
+│   │   └── Footer.jsx
+│   ├── App.jsx
+│   └── main.jsx
+├── PDF/
+│   ├── CihanserCaliskan_Resume.pdf
+│   └── Cihanser_Caliskan_Academic.pdf
+└── index.html
+```
 
+## 👤 Author
 
-## Project Structure
+**Cihanser Caliskan**
+- Software Engineer
+- [LinkedIn](https://www.linkedin.com/in/cihanser-caliskan/)
+- [GitHub](https://github.com/CihanserC)
 
-The project is organized into the following main files:
+## 📄 License
 
-* `index.html`: The main HTML file that defines the structure and content of the resume.
-* `style.css`: Contains all the CSS rules for styling the website, including responsive design rules.
-* `script.js`: Contains JavaScript code for interactive features.
-* `assets/`: (Optional: If you have an `assets` folder for images, fonts, etc., mention it here.) A directory for static assets like images or fonts.
-
----
-
-## Contact Me
-
-Feel free to reach out to me for any inquiries or collaborations!
-
-* **Email:** [cihansercaliskan@gmail.com]
-* **LinkedIn:** [www.linkedin.com/in/cihanser-caliskan/]
-* **GitHub:** [(https://github.com/CihanserC)]
+This project is open source and available under the MIT License.
