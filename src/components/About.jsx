@@ -31,33 +31,36 @@ const About = () => {
           </div>
           <div className="about-text">
             <p>
-              As a Senior Backend Developer at Veripark, I design and maintain robust backend services, 
-              optimizing performance for Akbank's banking solutions. With a focus on high-performance, 
-              scalable systems, I collaborate closely with cross-functional teams, ensuring secure and 
-              efficient solutions aligned with banking industry standards.
+              I am a Site Reliability Engineer at VBT Software Inc., currently assigned to the Garanti BBVA project.
+              My focus is on maintaining the reliability, scalability, and performance of banking infrastructure
+              through automation and system optimization.
             </p>
             <p>
-              Previously, I worked as a Senior Software Engineer at Doruk Automation, where I developed 
-              cutting-edge Industry 4.0 MES/MOM software to optimize manufacturing processes, ensuring 
-              seamless connectivity between machines, sensors, and enterprise systems. I have a strong 
-              background in integrating real-time data collection and analysis systems, enabling 
-              operational efficiency.
+              I have over five years of experience in software engineering. Previously, I served as a Senior
+              Backend Developer at Veripark for Akbank, where I designed scalable banking solutions. My
+              background also includes working as a Senior Software Engineer at Doruk Automation, focusing on
+              Industry 4.0 software, and as an Analyst Software Developer at Monovi. My experience spans
+              managing full project lifecycles, integrating real-time data, and automating workflows using Azure
+              DevOps.
             </p>
             <p>
-              My experience includes automating workflows using Azure DevOps Server, ensuring continuous 
-              delivery, and managing full project lifecycles. During my time as an Analyst Software 
-              Developer at Monovi, I implemented T&T systems for clients like JTI, managing incidents 
-              from reporting to resolution while adhering to service level agreements.
+              I hold a Master’s degree in Computer Engineering from Yasar University, specializing in
+              Optimization Problems, Heuristic Algorithms, and AI. I apply this academic foundation to address
+              complex technical challenges and streamline development pipelines.
             </p>
-            <p>
-              I hold a Master's degree in Optimization Problems, Heuristic Algorithms, Artificial 
-              Intelligence, and Machine Learning from Yasar University, where I also earned my 
-              Bachelor's degree in Computer Science.
-            </p>
-            <p>
-              My technical expertise spans C#, .Net Technologies, Python, Java, Unity, SQL, Machine 
-              Learning, and AI.
-            </p>
+
+            <h3 className="about-subtitle">Technical Expertise</h3>
+            <ul className="about-list">
+              <li>
+                <strong>SRE &amp; Backend:</strong> Site Reliability Engineering, C#, .NET, Java Spring Boot, SQL.
+              </li>
+              <li>
+                <strong>Infrastructure &amp; DevOps:</strong> CI/CD, Azure DevOps, Infrastructure Automation.
+              </li>
+              <li>
+                <strong>Advanced Research:</strong> Machine Learning, AI, and Optimization Algorithms.
+              </li>
+            </ul>
           </div>
         </div>
       </div>

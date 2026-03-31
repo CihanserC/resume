@@ -19,7 +19,6 @@ const Navbar = () => {
         <a href="#home" className="nav-logo">Cihanser Caliskan</a>
         <ul className="nav-menu">
           <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>

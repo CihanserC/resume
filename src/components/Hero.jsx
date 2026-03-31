@@ -3,6 +3,7 @@ import './Hero.css';
 
 const Hero = () => {
   const canvasRef = useRef(null);
+  const baseUrl = import.meta.env.BASE_URL;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -121,11 +122,16 @@ const Hero = () => {
           Passionate about solving and optimizing problems
         </p>
         <div className="hero-buttons">
-          <a href="#contact" className="btn btn-primary">Get In Touch</a>
-          <a href="/PDF/CihanserCaliskan_Resume.pdf" download className="btn btn-outline">
+          <a
+            href="mailto:cihansercaliskan@gmail.com?subject=Contact%20from%20your%20website"
+            className="btn btn-primary"
+          >
+            Get In Touch
+          </a>
+          <a href={`${baseUrl}PDF/CihanserCaliskan_Resume.pdf`} download className="btn btn-outline">
             Download Professional CV
           </a>
-          <a href="/PDF/Cihanser_Caliskan_Academic.pdf" download className="btn btn-outline">
+          <a href={`${baseUrl}PDF/Cihanser_Caliskan_Academic.pdf`} download className="btn btn-outline">
             Download Academic CV
           </a>
         </div>

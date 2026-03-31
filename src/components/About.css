@@ -57,6 +57,26 @@
   color: var(--text-color);
 }
 
+.about-subtitle {
+  margin: 0 0 1rem;
+  color: var(--primary-color);
+}
+
+.about-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+.about-list li {
+  margin-bottom: 0.75rem;
+}
+
+.about-list strong {
+  color: var(--primary-color);
+}
+
 .resume-downloads {
   margin-top: 2rem;
   padding-top: 2rem;
