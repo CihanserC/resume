@@ -1,0 +1,224 @@
+.schedule {
+  --row-label: 6rem;
+  --col-gap: 1rem;
+  --bar-height: 2.25rem;
+  --years: 11;
+  font-family: var(--sans);
+}
+
+.schedule-caption {
+  max-width: 40rem;
+  margin-bottom: 1.5rem;
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+
+.schedule-title {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.schedule-chart {
+  position: relative;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: var(--row-label) minmax(0, 1fr);
+  gap: var(--col-gap);
+  align-items: center;
+}
+
+.schedule-row-label {
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+
+.schedule-track {
+  position: relative;
+  height: var(--bar-height);
+  background-image: linear-gradient(to right, var(--rule) 1px, transparent 1px);
+  background-size: calc(100% / var(--years)) 100%;
+  border-bottom: 1px solid var(--rule);
+}
+
+.bar {
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  display: flex;
+  align-items: center;
+  min-width: 6px;
+  padding: 0 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  font: inherit;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--paper);
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+  animation: bar-draw 0.55s cubic-bezier(0.3, 0.7, 0.2, 1) both;
+  animation-delay: calc(var(--order) * 110ms + 250ms);
+}
+
+.bar-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bar--work {
+  background: var(--work);
+}
+
+.bar--research {
+  background: var(--research);
+}
+
+.bar--study {
+  background: transparent;
+  border-color: var(--study);
+  color: var(--ink);
+}
+
+.bar--ongoing {
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 1.5rem), transparent);
+  mask-image: linear-gradient(to right, #000 calc(100% - 1.5rem), transparent);
+}
+
+.bar[aria-pressed='true'] {
+  box-shadow: 0 0 0 2px var(--paper), 0 0 0 3.5px var(--ink);
+}
+
+.bar:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--accent);
+}
+
+@keyframes bar-draw {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.schedule-axis .schedule-track {
+  height: 1.5rem;
+  background: none;
+  border: 0;
+}
+
+.tick {
+  position: absolute;
+  top: 0.25rem;
+  padding-left: 4px;
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.today {
+  position: absolute;
+  bottom: 0;
+  height: calc(3 * var(--bar-height) + 3 * 0.5rem + 1.5rem);
+  border-left: 1.5px dashed var(--ink);
+}
+
+.today-label {
+  position: absolute;
+  top: -1.4rem;
+  left: 0;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.schedule-detail {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0 0.9rem;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-left: calc(var(--row-label) + var(--col-gap));
+  padding: 0.9rem 1.1rem;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+}
+
+.swatch {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 2px;
+}
+
+.swatch--work {
+  background: var(--work);
+}
+
+.swatch--research {
+  background: var(--research);
+}
+
+.swatch--study {
+  border: 1.5px solid var(--study);
+}
+
+.detail-title {
+  font-family: var(--serif);
+  font-size: var(--step-0);
+  line-height: 1.3;
+}
+
+.detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.25rem;
+}
+
+.detail-link {
+  font-size: var(--step--1);
+  font-weight: 500;
+}
+
+@media (max-width: 760px) {
+  .schedule {
+    --row-label: 4.25rem;
+    --col-gap: 0.5rem;
+  }
+
+  .schedule-row-label {
+    font-size: 0.75rem;
+  }
+
+  /* Too narrow for readable labels; the detail panel names the selected bar. */
+  .bar-label {
+    display: none;
+  }
+
+  .tick:nth-child(even) {
+    visibility: hidden;
+  }
+
+  .schedule-detail {
+    margin-left: 0;
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .detail-link {
+    grid-column: 2;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar {
+    animation: none;
+  }
+}

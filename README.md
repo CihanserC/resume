@@ -1,64 +1,31 @@
-# Resume Website
+# Cihanser Çalışkan, portfolio
 
-A modern, interactive personal resume website built with React and Vite.
+Personal portfolio at https://cihanserc.github.io/resume, in English and Turkish.
 
-## 🚀 Features
+The hero draws my career as a job-shop schedule (Gantt chart): each row is a "machine" (work, research, education) and each bar a "job". It nods to my research on genetic algorithms for scheduling.
 
-- **Interactive Background**: LinkedIn-inspired blue gradient with mouse-responsive particle system
-- **Responsive Design**: Mobile-friendly layout that adapts to all screen sizes
-- **Modern UI**: Clean and professional design with smooth animations
-- **Fast Performance**: Built with Vite for lightning-fast load times
+The header has a language switch (EN/TR) and a light/dark mode toggle; both choices are remembered.
 
-## 🛠️ Technologies
+## Editing content
 
-- React 18
-- Vite
-- CSS3 with animations
-- Canvas API for particle effects
-- Font Awesome icons
+All text and data live in [`src/content.js`](src/content.js):
 
-## 📦 Installation
+- `schedule`: dates for every bar in the career chart (`end: null` means ongoing)
+- `projects`: project links and stacks
+- `copy.en` / `copy.tr`: every piece of text, in both languages
+
+Update `NOW` in the same file to move the "today" line.
+
+## Development
 
 ```bash
-# Install dependencies
 npm install
-
-# Run development server
-npm run dev
-
-# Build for production
-npm run build
+npm run dev      # http://localhost:3000/resume/
+npm run build    # outputs to dist/
 ```
 
-## 🌐 Development
+Pushing to `main` deploys to GitHub Pages through `.github/workflows/deploy.yml`.
 
-The site runs on `http://localhost:3000` by default.
+## Stack
 
-## 📁 Project Structure
-
-```
-ResumeWebSite/
-├── src/
-│   ├── components/
-│   │   ├── Navbar.jsx
-│   │   ├── Hero.jsx
-│   │   ├── About.jsx
-│   │   └── Footer.jsx
-│   ├── App.jsx
-│   └── main.jsx
-├── PDF/
-│   ├── CihanserCaliskan_Resume.pdf
-│   └── Cihanser_Caliskan_Academic.pdf
-└── index.html
-```
-
-## 👤 Author
-
-**Cihanser Caliskan**
-- Software Engineer
-- [LinkedIn](https://www.linkedin.com/in/cihanser-caliskan/)
-- [GitHub](https://github.com/CihanserC)
-
-## 📄 License
-
-This project is open source and available under the MIT License.
+React 18, Vite, plain CSS. Fonts: Newsreader and Schibsted Grotesk (Google Fonts).

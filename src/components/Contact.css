@@ -1,0 +1,20 @@
+.contact-lead {
+  font-size: var(--step-1);
+  line-height: 1.4;
+  max-width: 34rem;
+  margin-bottom: 1.25rem;
+}
+
+.contact-email {
+  display: inline-block;
+  font-size: var(--step-3);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+  margin-bottom: 1.75rem;
+}
+
+.contact-links {
+  margin-bottom: 1rem;
+}

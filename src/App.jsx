@@ -1,18 +1,34 @@
 import React from 'react';
-import Navbar from './components/Navbar';
+import Header from './components/Header';
 import Hero from './components/Hero';
-import About from './components/About';
-import Footer from './components/Footer';
-import './App.css';
+import Experience from './components/Experience';
+import Research from './components/Research';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import Contact from './components/Contact';
+import { useLang } from './i18n';
 
 function App() {
+  const { t } = useLang();
+
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <About />
-      <Footer />
-    </div>
+    <>
+      <a className="skip-link" href="#main">{t.skip}</a>
+      <Header />
+      <main id="main">
+        <Hero />
+        <Experience />
+        <Research />
+        <Projects />
+        <Skills />
+        <Contact />
+      </main>
+      <footer className="site-footer">
+        <div className="container">
+          <p>© {new Date().getFullYear()} Cihanser Çalışkan. {t.footer}</p>
+        </div>
+      </footer>
+    </>
   );
 }
 

@@ -1,0 +1,17 @@
+.publication {
+  margin-bottom: 3rem;
+  padding-left: 1.25rem;
+  border-left: 3px solid var(--research);
+}
+
+.citation {
+  font-size: var(--step-1);
+  line-height: 1.45;
+  margin-bottom: 0.9rem;
+}
+
+.research-subhead {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}

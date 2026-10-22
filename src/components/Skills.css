@@ -1,0 +1,29 @@
+.skills {
+  display: grid;
+}
+
+.skill {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr);
+  gap: 0.25rem 1.5rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.skill:first-child {
+  padding-top: 0;
+}
+
+.skill dt {
+  padding-top: 0.2rem;
+}
+
+.skill dd {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .skill {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
