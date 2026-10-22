@@ -55,13 +55,6 @@ export const projects = {
       id: 'optimization',
       items: [
         { id: 'motsp', name: 'Multi-Objective TSP', stack: 'Java', source: 'https://github.com/CihanserC/Multi-Objective-TSP', demo: true },
-        { id: 'infotheory', name: 'Advanced Information Theory', stack: 'C#', source: 'https://github.com/CihanserC/Advanced-Information-Theory' },
-      ],
-    },
-    {
-      id: 'graphics',
-      items: [
-        { id: 'garage', name: 'Muscle Garage', stack: 'React, Three.js, Rapier', source: 'https://github.com/CihanserC/NFS-Most-Wanted' },
       ],
     },
   ],
@@ -196,11 +189,9 @@ export const copy = {
       aural:
         'A scroll-driven 3D launch page where an earbud case opens and the earbud comes apart layer by layer.',
     },
-    groups: { optimization: 'Optimization and research code', graphics: 'Graphics and games' },
+    groups: { optimization: 'Optimization and research code' },
     items: {
       motsp: 'NSGA-II for a travelling salesman problem with two objectives: distance and travel time.',
-      infotheory: 'Entropy, redundancy and Huffman coding measured on English text.',
-      garage: 'A browser-based 3D garage: tune a car part by part, then test-drive it with real physics.',
     },
     more: 'Everything else is on GitHub',
   },
