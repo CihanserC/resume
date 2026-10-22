@@ -1,0 +1,125 @@
+.pareto {
+  margin-top: 1.25rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  font-family: var(--sans);
+}
+
+.pareto-panels {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.pareto figure {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.pareto svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pareto .axis {
+  stroke: var(--rule);
+  stroke-width: 1;
+}
+
+.pareto .axis-label {
+  font-size: 9px;
+  fill: var(--muted);
+}
+
+.pareto .axis-value {
+  font-size: 8px;
+  fill: var(--muted);
+}
+
+.pareto .dot {
+  transition: cx 0.25s ease, cy 0.25s ease;
+}
+
+.pareto .dot--dominated {
+  fill: var(--study);
+  opacity: 0.55;
+}
+
+.pareto .dot--front {
+  fill: var(--research);
+  stroke: var(--surface);
+  stroke-width: 1.5;
+  cursor: pointer;
+}
+
+.pareto .dot--front:focus-visible {
+  outline: none;
+  stroke: var(--accent);
+  stroke-width: 2.5;
+}
+
+.pareto .dot--front.is-selected {
+  fill: var(--ink);
+}
+
+.pareto .stairs {
+  fill: none;
+  stroke: var(--research);
+  stroke-width: 1.25;
+  stroke-dasharray: 3 3;
+}
+
+.pareto-map svg {
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background-image: radial-gradient(var(--rule) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.pareto .route {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+}
+
+.pareto .city {
+  fill: var(--research);
+  stroke: var(--surface);
+  stroke-width: 1.5;
+}
+
+.pareto-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem 2rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+}
+
+.pareto-footer .ga-actions {
+  margin-top: 0;
+}
+
+@media (max-width: 560px) {
+  .pareto {
+    padding: 1rem;
+  }
+
+  .pareto-panels {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pareto .dot {
+    transition: none;
+  }
+}

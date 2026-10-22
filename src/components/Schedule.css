@@ -62,7 +62,8 @@
   cursor: pointer;
   overflow: hidden;
   animation: bar-draw 0.55s cubic-bezier(0.3, 0.7, 0.2, 1) both;
-  animation-delay: calc(var(--order) * 110ms + 250ms);
+  /* Starts once the hero name has settled (see Hero.css). */
+  animation-delay: calc(var(--order) * 110ms + 900ms);
 }
 
 .bar-label {

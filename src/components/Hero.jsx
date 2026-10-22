@@ -11,9 +11,7 @@ const Hero = () => {
     <section className="hero" aria-labelledby="hero-name">
       <div className="container">
         <h1 id="hero-name" className="hero-name">
-          Cihanser
-          <br />
-          Çalışkan
+          <span className="hero-line">Cihanser</span> <span className="hero-line">Çalışkan</span>
         </h1>
         <div className="hero-text">
           <p className="hero-role">{t.hero.role}</p>

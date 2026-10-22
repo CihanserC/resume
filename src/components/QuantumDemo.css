@@ -1,0 +1,108 @@
+.quantum {
+  margin: 3.5rem 0 0;
+}
+
+.quantum-panel {
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  font-family: var(--sans);
+}
+
+.qbits {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 1rem 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.qbit {
+  display: grid;
+  justify-items: center;
+  gap: 0.2rem;
+}
+
+.qbit-dial {
+  width: 100%;
+  max-width: 3rem;
+  height: auto;
+  overflow: visible;
+}
+
+.qbit-arc {
+  fill: none;
+  stroke: var(--rule);
+  stroke-width: 1.2;
+}
+
+.qbit-axis {
+  stroke: var(--rule);
+  stroke-width: 1;
+}
+
+.qbit-needle {
+  transform-box: view-box;
+  transform-origin: 4px 32px;
+  transition: transform 0.15s ease;
+}
+
+.qbit-needle line {
+  stroke: var(--work);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.qbit-needle circle {
+  fill: var(--work);
+}
+
+.qbit-prob {
+  font-size: 0.6875rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.qbit-bit {
+  display: grid;
+  place-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.qbit-bit.is-right {
+  background: var(--research);
+  border-color: var(--research);
+  color: var(--surface);
+}
+
+.qbit-bit.is-wrong {
+  color: var(--ink);
+}
+
+.quantum-legend {
+  margin-top: 1rem;
+}
+
+@media (max-width: 560px) {
+  .quantum-panel {
+    padding: 1rem;
+  }
+
+  .qbits {
+    gap: 0.75rem 0.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qbit-needle {
+    transition: none;
+  }
+}

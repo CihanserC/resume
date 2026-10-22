@@ -1,0 +1,170 @@
+.ga-demo {
+  margin-bottom: 3.5rem;
+  --op-s: 42%;
+  --op-l: 52%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .ga-demo {
+    --op-l: 60%;
+  }
+}
+
+:root[data-theme='dark'] .ga-demo {
+  --op-l: 60%;
+}
+
+.ga-intro {
+  margin-bottom: 1.25rem;
+}
+
+.ga-panel {
+  padding: 1.5rem 1.5rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  font-family: var(--sans);
+}
+
+.ga-gantt {
+  --label: 2rem;
+  --gap: 0.5rem;
+  position: relative;
+  display: grid;
+  gap: 4px;
+  padding-top: 1.5rem;
+}
+
+.ga-row {
+  display: grid;
+  grid-template-columns: var(--label) minmax(0, 1fr);
+  gap: var(--gap);
+  align-items: center;
+}
+
+.ga-machine {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.ga-track {
+  position: relative;
+  height: 1.6rem;
+  background: color-mix(in srgb, var(--rule) 35%, transparent);
+  border-radius: 2px;
+}
+
+.ga-op {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: hsl(var(--hue) var(--op-s) var(--op-l));
+  border-right: 1.5px solid var(--surface);
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+.ga-makespan {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--label) + var(--gap) + (100% - var(--label) - var(--gap)) * var(--at));
+  border-left: 1.5px dashed var(--ink);
+  transition: left 0.3s ease;
+}
+
+.ga-makespan-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.ga-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 9rem;
+  gap: 1.5rem;
+  align-items: end;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+}
+
+.ga-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+}
+
+.ga-stats dt {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.ga-stats dd {
+  margin: 0;
+  font-size: var(--step-1);
+  font-variant-numeric: tabular-nums;
+}
+
+.ga-gain {
+  font-size: var(--step--1);
+  font-weight: 600;
+  color: var(--research);
+}
+
+.ga-curve {
+  width: 100%;
+  height: 3rem;
+  overflow: visible;
+}
+
+.ga-curve polyline {
+  fill: none;
+  stroke: var(--research);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+  stroke-linejoin: round;
+}
+
+.ga-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.ga-actions .button {
+  background: none;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.ga-actions .button--solid {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.ga-actions .button:disabled {
+  opacity: 0.55;
+  cursor: progress;
+}
+
+@media (max-width: 560px) {
+  .ga-panel {
+    padding: 1rem;
+  }
+
+  .ga-footer {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ga-op,
+  .ga-makespan {
+    transition: none;
+  }
+}

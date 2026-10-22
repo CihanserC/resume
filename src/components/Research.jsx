@@ -1,6 +1,8 @@
 import React from 'react';
 import { links, schedule } from '../content';
 import { formatRange, useLang } from '../i18n';
+import GaDemo from './GaDemo';
+import QuantumDemo from './QuantumDemo';
 import './Entries.css';
 import './Research.css';
 
@@ -38,7 +40,11 @@ const Research = () => {
             </div>
           </div>
 
+          <GaDemo />
+
           <ol className="entries">{WORK.map((id) => renderEntry(id, t.research.work[id]))}</ol>
+
+          <QuantumDemo />
 
           <p className="subhead research-subhead">{t.research.educationTitle}</p>
           <ol className="entries">{EDUCATION.map((id) => renderEntry(id, t.research.education[id]))}</ol>
