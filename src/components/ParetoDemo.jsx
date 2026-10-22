@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { copy as t } from '../content';
 import { createRandom } from '../ga';
 import { createCities, createNSGA } from '../nsga';
-import { useLang } from '../i18n';
 import './ParetoDemo.css';
 
 const CITIES = 12;
@@ -18,7 +18,6 @@ const snapshot = (nsga, generation) => ({
 });
 
 const ParetoDemo = () => {
-  const { t } = useLang();
   const [seed, setSeed] = useState(3);
   const [state, setState] = useState(null);
   const [running, setRunning] = useState(false);

@@ -1,9 +1,8 @@
 import React from 'react';
-import { useLang } from '../i18n';
+import { copy as t } from '../content';
 import './Skills.css';
 
 const Skills = () => {
-  const { t } = useLang();
 
   return (
     <section id="skills" className="section" aria-labelledby="skills-title">

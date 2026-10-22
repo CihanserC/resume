@@ -1,12 +1,11 @@
 import React from 'react';
-import { schedule } from '../content';
-import { formatRange, useLang } from '../i18n';
+import { schedule, copy as t } from '../content';
+import { formatRange } from '../format';
 import './Entries.css';
 
 const JOBS = ['vbt', 'veripark', 'doruk', 'monovi'];
 
 const Experience = () => {
-  const { lang, t } = useLang();
 
   return (
     <section id="experience" className="section" aria-labelledby="experience-title">
@@ -17,7 +16,7 @@ const Experience = () => {
             const job = schedule.find((item) => item.id === id);
             return (
               <li key={id} id={id} className="entry">
-                <p className="meta entry-date">{formatRange(job.start, job.end, lang, t.present)}</p>
+                <p className="meta entry-date">{formatRange(job.start, job.end, t.present)}</p>
                 <div>
                   <h3 className="entry-title">{t.items[id].title}</h3>
                   <p className="meta">{t.items[id].org}</p>

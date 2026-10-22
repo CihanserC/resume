@@ -1,12 +1,11 @@
 import React from 'react';
-import { useLang } from '../i18n';
+import { copy as t } from '../content';
 import { useTheme } from '../theme';
 import './Header.css';
 
 const SECTIONS = ['experience', 'research', 'projects', 'contact'];
 
 const Header = () => {
-  const { lang, setLang, t } = useLang();
   const { theme, toggleTheme } = useTheme();
 
   return (
@@ -22,19 +21,6 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-        <div className="lang-switch" role="group" aria-label={t.langLabel}>
-          {['en', 'tr'].map((code) => (
-            <button
-              key={code}
-              type="button"
-              lang={code}
-              aria-pressed={lang === code}
-              onClick={() => setLang(code)}
-            >
-              {code.toUpperCase()}
-            </button>
-          ))}
-        </div>
         <button
           type="button"
           className="theme-toggle"

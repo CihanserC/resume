@@ -1,10 +1,10 @@
 # Cihanser Çalışkan, portfolio
 
-Personal portfolio at https://cihanserc.github.io/resume, in English and Turkish.
+Personal portfolio at https://cihanserc.github.io/resume.
 
 The hero draws my career as a job-shop schedule (Gantt chart): each row is a "machine" (work, research, education) and each bar a "job". It nods to my research on genetic algorithms for scheduling.
 
-The header has a language switch (EN/TR) and a light/dark mode toggle; both choices are remembered.
+The header has a light/dark mode toggle; the choice is remembered.
 
 ## Editing content
 
@@ -12,7 +12,7 @@ All text and data live in [`src/content.js`](src/content.js):
 
 - `schedule`: dates for every bar in the career chart (`end: null` means ongoing)
 - `projects`: project links and stacks
-- `copy.en` / `copy.tr`: every piece of text, in both languages
+- `copy`: every piece of text on the page
 
 Update `NOW` in the same file to move the "today" line.
 

@@ -1,10 +1,8 @@
 import React from 'react';
-import { links } from '../content';
-import { useLang } from '../i18n';
+import { links, copy as t } from '../content';
 import './Contact.css';
 
 const Contact = () => {
-  const { t } = useLang();
 
   return (
     <section id="contact" className="section contact" aria-labelledby="contact-title">

@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { copy as t } from '../content';
 import { createRandom } from '../ga';
 import { createQIEA } from '../qiea';
-import { useLang } from '../i18n';
 import './QuantumDemo.css';
 
 const BITS = 16;
@@ -24,7 +24,6 @@ const Dial = ({ theta }) => {
 };
 
 const QuantumDemo = () => {
-  const { t } = useLang();
   const [seed, setSeed] = useState(1);
   const [state, setState] = useState(null); // { generation, angles, observed, best }
   const [running, setRunning] = useState(false);

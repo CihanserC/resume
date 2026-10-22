@@ -1,4 +1,5 @@
 import React from 'react';
+import { copy as t } from './content';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Experience from './components/Experience';
@@ -6,10 +7,8 @@ import Research from './components/Research';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
-import { useLang } from './i18n';
 
 function App() {
-  const { t } = useLang();
 
   return (
     <>

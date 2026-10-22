@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { copy as t } from '../content';
 import { createGA, createProblem, createRandom, makespan, operations } from '../ga';
-import { useLang } from '../i18n';
 import './GaDemo.css';
 
 const JOBS = 15;
@@ -18,7 +18,6 @@ const randomOrder = (random) => {
 };
 
 const GaDemo = () => {
-  const { t } = useLang();
   const [seed, setSeed] = useState(7);
   const problem = useMemo(() => {
     const random = createRandom(seed);

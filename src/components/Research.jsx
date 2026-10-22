@@ -1,6 +1,6 @@
 import React from 'react';
-import { links, schedule } from '../content';
-import { formatRange, useLang } from '../i18n';
+import { links, schedule, copy as t } from '../content';
+import { formatRange } from '../format';
 import GaDemo from './GaDemo';
 import QuantumDemo from './QuantumDemo';
 import './Entries.css';
@@ -10,13 +10,12 @@ const WORK = ['mojssp', 'thesis', 'pof'];
 const EDUCATION = ['msc', 'bsc'];
 
 const Research = () => {
-  const { lang, t } = useLang();
 
   const renderEntry = (id, text) => {
     const item = schedule.find((job) => job.id === id);
     return (
       <li key={id} id={id} className="entry">
-        <p className="meta entry-date">{formatRange(item.start, item.end, lang, t.present)}</p>
+        <p className="meta entry-date">{formatRange(item.start, item.end, t.present)}</p>
         <div>
           <h3 className="entry-title">{t.items[id].title}</h3>
           <p className="meta">{t.items[id].org}</p>

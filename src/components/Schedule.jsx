@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { NOW, schedule } from '../content';
-import { formatRange, useLang } from '../i18n';
+import { NOW, schedule, copy as t } from '../content';
+import { formatRange } from '../format';
 import './Schedule.css';
 
 const DOMAIN_START = 2016;
@@ -19,7 +19,6 @@ const toPercent = (value) => ((toYear(value) - DOMAIN_START) / (DOMAIN_END - DOM
 const drawOrder = [...schedule].sort((a, b) => toYear(a.start) - toYear(b.start)).map((job) => job.id);
 
 const Schedule = () => {
-  const { lang, t } = useLang();
   const [activeId, setActiveId] = useState('vbt');
   const active = schedule.find((job) => job.id === activeId);
   const activeText = t.items[activeId];
@@ -81,7 +80,7 @@ const Schedule = () => {
           <p className="detail-title">{activeText.title}</p>
           <p className="meta detail-meta">
             <span>{activeText.org}</span>
-            <span>{formatRange(active.start, active.end, lang, t.present)}</span>
+            <span>{formatRange(active.start, active.end, t.present)}</span>
           </p>
         </div>
         <a className="detail-link" href={`#${activeId}`}>{t.schedule.open}</a>

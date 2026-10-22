@@ -1,11 +1,9 @@
 import React from 'react';
-import { links, projects } from '../content';
-import { useLang } from '../i18n';
+import { links, projects, copy as t } from '../content';
 import ParetoDemo from './ParetoDemo';
 import './Projects.css';
 
 const ProjectLinks = ({ project }) => {
-  const { t } = useLang();
   return (
     <div className="link-row">
       {project.live && (
@@ -17,7 +15,6 @@ const ProjectLinks = ({ project }) => {
 };
 
 const Projects = () => {
-  const { t } = useLang();
   const base = import.meta.env.BASE_URL;
 
   return (

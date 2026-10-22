@@ -1,11 +1,9 @@
 import React from 'react';
-import { links } from '../content';
-import { useLang } from '../i18n';
+import { links, copy as t } from '../content';
 import Schedule from './Schedule';
 import './Hero.css';
 
 const Hero = () => {
-  const { t } = useLang();
 
   return (
     <section className="hero" aria-labelledby="hero-name">

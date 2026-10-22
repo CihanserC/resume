@@ -36,36 +36,11 @@
   color: var(--ink);
 }
 
-.lang-switch {
-  display: flex;
-  border: 1px solid var(--rule);
-  border-radius: 999px;
-  padding: 2px;
-}
-
-.lang-switch button {
-  font: inherit;
-  font-weight: 500;
-  font-size: 0.8125rem;
-  color: var(--muted);
-  background: none;
-  border: 0;
-  border-radius: 999px;
-  padding: 0.2rem 0.6rem;
-  cursor: pointer;
-}
-
-.lang-switch button[aria-pressed='true'] {
-  background: var(--ink);
-  color: var(--paper);
-}
-
 .theme-toggle {
   display: grid;
   place-items: center;
   width: 2rem;
   height: 2rem;
-  margin-left: -1.25rem;
   padding: 0;
   border: 1px solid var(--rule);
   border-radius: 50%;
